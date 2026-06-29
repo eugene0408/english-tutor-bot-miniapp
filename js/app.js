@@ -1,11 +1,12 @@
 const tg = window.Telegram?.WebApp;
+const API_BASE_URL = "https://english-buddy-bot-248.duckdns.org";
 
 if (tg) {
   tg.ready();
 }
 
 const appState = {
-  userId: tg?.initDataUnsafe?.user?.id || 12345,
+  userId: tg?.initDataUnsafe?.user?.id,
   level: "B2",
   temperature: 7,
 };
@@ -37,8 +38,6 @@ function showToast(message = "Saved Successfully ✅") {
 /*  ================================
   API SETTINGS
  ==================================== */
-
-const API_BASE_URL = "https://3nz24zdv-8000.euw.devtunnels.ms";
 
 async function loadSettings() {
   try {
