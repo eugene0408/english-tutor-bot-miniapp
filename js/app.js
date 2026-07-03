@@ -15,6 +15,14 @@ function hidePreloader() {
   document.getElementById("preloader").classList.remove("preloader_show");
 }
 
+function showUserGreeting() {
+  if (tg.initDataUnsafe && tg.initDataUnsafe.user) {
+    const user = tg.initDataUnsafe.user;
+    const name = user.first_name;
+    document.getElementById("greeting").innerText = `Hi, ${name}!`;
+  }
+}
+
 let toastTimer = null;
 function showToast(message = "Saved Successfully ✅") {
   const toast = document.getElementById("toast-notification");
@@ -130,6 +138,7 @@ function updateLevel() {
 }
 
 function renderUI() {
+  showUserGreeting();
   updateLevel();
   updateTemperature();
 }

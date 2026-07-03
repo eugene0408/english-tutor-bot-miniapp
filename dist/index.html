@@ -11,18 +11,23 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-    <!-- Styles -->
-    <link rel="stylesheet" href="styles/main.min.css" />
-    <!-- Scripts -->
+
+
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
-    <script src="js/app.min.js" defer></script>
+
     <title>English Buddy</title>
+    <script type="module" crossorigin src="/assets/index-CC9poctb.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-ePNoMqk2.css">
   </head>
+
   <body>
     <div id="toast-notification" class="toast">Saved Successfully ✅</div>
     <section class="wrapper">
+      <div class="greeting-wrapper">
+        <h1 id="greeting">Hello!</h1>
+      </div>
       <div class="buttons-group">
-        <h1>⚙️ Settings</h1>
+        <h2>⚙️ Settings</h2>
         <div class="settings-row">
           <div class="settings-group">
             <h3>Your Level</h3>
@@ -46,7 +51,7 @@
       </div>
 
       <div class="buttons-group">
-        <h1>🚀 Commands</h1>
+        <h2>🚀 Commands</h2>
         <button id="randomQuestBtn" class="action-button">
           🎲 Ask random question
         </button>
@@ -56,11 +61,11 @@
       </div>
     </section>
     <div class="close-button-wrapper">
-      <button id="closeBtn" class="action-button">◀️ Return to chat</button>
+      <button id="closeBtn" class="action-button">❮ Close & Return</button>
     </div>
     <div class="preloader preloader_show" id="preloader">
       <div class="loader"></div>
       <h3>Loading Your Data</h3>
-    </div>
+    </div>
   </body>
 </html>
